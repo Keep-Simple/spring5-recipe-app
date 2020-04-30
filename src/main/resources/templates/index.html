@@ -7,16 +7,14 @@
 <body>
 <h1>My Recipes!</h1>
 
-<table border="2px">
+<table>
     <tr>
+        <th>ID</th>
         <th>Description</th>
-        <th>Notes</th>
-        <th>Difficulty</th>
     </tr>
     <tr th:each="recipe : ${recipes}">
-        <td th:text="${recipe.description}">desc</td>
-        <td th:text="${recipe.notes.recipeNotes}">notes</td>
-        <td th:text="${recipe.difficulty.toString().toLowerCase()}">difficulty</td>
+        <td th:text="${recipe.id}">123</td>
+        <td th:text="${recipe.description}">Tasty Goodnees</td>
     </tr>
 </table>
 </body>
