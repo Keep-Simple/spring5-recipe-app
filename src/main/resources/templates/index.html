@@ -7,18 +7,16 @@
 <body>
 <h1>My Recipes!</h1>
 
-<table border="1px">
+<table border="2px">
     <tr>
         <th>Description</th>
-        <th>Source</th>
-        <th>Categories</th>
+        <th>Notes</th>
         <th>Difficulty</th>
     </tr>
     <tr th:each="recipe : ${recipes}">
         <td th:text="${recipe.description}">desc</td>
-        <td th:text="${recipe.source}">source</td>
-        <td th:text="${recipe.getCategories()}">categories</td>
-        <td th:text="${recipe.getDifficulty()}">difficulty</td>
+        <td th:text="${recipe.notes.recipeNotes}">notes</td>
+        <td th:text="${recipe.difficulty.toString().toLowerCase()}">difficulty</td>
     </tr>
 </table>
 </body>
